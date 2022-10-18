@@ -1,0 +1,368 @@
+* {
+  font-family: "Poppins", sans-serif;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #222121;
+}
+
+h2 {
+  font-family: Poppins;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+}
+h3 {
+  font-family: Poppins;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+
+/* .contenedor{
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+ grid-template-columns: repeat(3, 1f);
+  grid-template-areas: "header header header"
+                        "nosotros nosotros nosotros";
+
+} */
+
+.header {
+  position: sticky;
+  height: 40px;
+  z-index: 200;
+  top: 0px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .header-logo {
+  height: 100%;
+  /* background-image: url("https://craving.net.ar/viviendassalvador-com-ar/file/384b2157-e49f-48ac-869a-fc4daac22035/logo-1638378393205.png"); */
+}
+
+.header #navbar {
+  display: flex;
+  gap: 10px;
+}
+
+.header #navbar div {
+  padding: 10px 5px;
+  cursor: pointer;
+}
+.header #navbar div:hover {
+  background-color: #bf3030;
+  color: white;
+}
+.header #navbar div:hover a {
+  color: white;
+}
+.header #navbar div a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* SECCION BANNER */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease-in-out;
+  background-image: url("../imagenes/banner1.jpg");
+  animation: banner 15s infinite linear;
+}
+
+.banner-fondo {
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+span {
+  margin: 0;
+  padding: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+span h2 {
+  z-index: 1;
+  color: #fff;
+  font-weight: 400;
+  font-size: 3vw;
+  text-shadow: 1px 1px 2px black;
+  margin-bottom: 20px;
+}
+
+span h3 {
+  z-index: 1;
+  color: #fff;
+  font-weight: 400;
+  font-size: 3vw;
+  text-shadow: 1px 1px 2px black;
+  margin-bottom: 20px;
+}
+
+/* ANIMACIÓN BANNER */
+
+@keyframes banner {
+  0%,
+  33% {
+    background-image: url("../imagenes/banner1.jpg");
+  }
+
+  34%,
+  66% {
+    background-image: url("../imagenes/banner2.jpg");
+  }
+  67%,
+  100% {
+    background-image: url("../imagenes/banner3.jpg");
+  }
+}
+
+/* SECCION MODELOS CASAS */
+
+.modelos {
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.modelos-titulo {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modelo-ficha {
+  width: 470px;
+  height: 630px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: rgb(231, 227, 227);
+}
+
+.modelos img {
+  width: 470px;
+  height: 290px;
+}
+
+.modelos h3 {
+  font-weight: bolder;
+}
+
+.modelo-ficha:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba (0, 0, 0, 0.5);
+}
+
+.modelos p {
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.modelos a {
+  text-decoration: none;
+  color: black;
+}
+
+.boton-modelos {
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  background-color: white;
+  border: 3px solid #bf3030;
+  justify-content: flex-end;
+}
+
+.boton-modelos:hover {
+  background-color: #bf3030;
+  color: white;
+}
+
+/* SECCION SOBRE NOSOTROS*/
+
+.nosotros {
+  display: grid;
+  background-color: #bf3030;
+  border-radius: 15px;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+}
+
+.nosotros-texto {
+  grid-column: 2 / 3;
+  grid-row: 1/ 3;
+}
+
+.nosotros-imagen {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.nosotros img {
+  width: 600px;
+  height: 550px;
+  border-radius: 10px;
+  margin-left: 40px;
+}
+
+.nosotros-texto h2 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: azure;
+  margin-bottom: 20px;
+}
+
+.nosotros-texto h3 {
+  text-align: center;
+  color: azure;
+  margin-bottom: 20px;
+}
+
+.nosotros-texto p {
+  padding: 20px 60px;
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 1.5;
+  color: azure;
+}
+
+/* SECCION POR QUÉ ELEGIRNOS*/
+
+.elegirnos-texto h2 {
+  text-align: center;
+  padding: 100px 60px 15px;
+}
+
+.elegirnos-texto li {
+  padding: 20px 60px;
+  font-size: 1.5rem;
+  text-align: justify;
+  letter-spacing: 1px;
+  list-style: none;
+}
+
+.elegirnos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-texto h2 {
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  .banner-texto h3 {
+    font-size: 3vh;
+    text-align: center;
+  }
+}
+/*FORMULARIO*/
+
+.footer {
+}
+
+.redes-sociales{
+    background-color: #bf3030;
+    color: white;
+    text-align: right;
+    justify-content: right;
+    padding: 10px;
+}
+
+.redes-sociales a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.contenedor-contacto {
+  display: flex;
+  margin: 0px 10px 10px;
+}
+
+form {
+  width: 300px;
+  padding: 16px;
+  border-radius: 0px;
+  margin: auto;
+  background-color: #ccc;
+}
+
+form label {
+  width: 72px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 180px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  display: inline-block;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 8px 16px;
+  margin-top: 32px;
+  border: 1px solid rgb(160, 5, 5);
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  background-color: rgb(160, 5, 5);
+}
+
+form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  /*resize: vertical | horizontal | none | both*/
+  resize: none;
+  display: block;
+}
